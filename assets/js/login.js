@@ -34,7 +34,7 @@ $(function() {
         //1.阻止默认提交行为
         e.preventDefault();
         //2.  发起ajax的post请求
-        $.post('http://api-breakingnews-web.itheima.net/api/reguser', {
+        $.post('/api/reguser', {
             username: $('#form-reg [name=username]').val(),
             password: $('#form-reg [name=password]').val(),
         }, function(res) {
