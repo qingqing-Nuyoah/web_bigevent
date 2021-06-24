@@ -24,9 +24,6 @@ function getUserInfo() {
     $.ajax({
         method: 'GET',
         url: '/my/userinfo',
-        // headers: {
-        //     Authorization: localStorage.getItem('token') || ''
-        // },
         success: function(res) {
 
             if (res.status !== 0) {
@@ -40,7 +37,8 @@ function getUserInfo() {
     })
 
 }
-//渲染用户头像
+// 渲染用户头像
+
 function renderAvatar(user) {
     //获取用户的名称
     var name = user.nickname || user.username
